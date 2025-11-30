@@ -1,0 +1,79 @@
+Hardware threads: 8
+
+===== SIZE = 100000 =====
+transform_reduce (no policy):   0.305 ms
+transform_reduce (par):         0.339 ms
+transform_reduce (par_unseq):   0.138 ms
+
+Manual parallel transform_reduce:
+K       Time_ms
+1       0.844
+2       0.315
+3       0.311
+4       0.352
+5       0.349
+6       0.317
+7       0.348
+8       0.376
+9       0.485
+10      0.748
+11      0.518
+12      0.553
+13      0.708
+14      0.619
+15      0.558
+16      0.616
+
+Best K = 3, K/hw = 0.375
+
+===== SIZE = 1000000 =====
+transform_reduce (no policy):   3.102 ms
+transform_reduce (par):         0.875 ms
+transform_reduce (par_unseq):   0.880 ms
+
+Manual parallel transform_reduce:
+K       Time_ms
+1       3.387
+2       1.856
+3       1.377
+4       1.463
+5       1.335
+6       1.323
+7       1.184
+8       1.359
+9       1.488
+10      1.431
+11      1.324
+12      1.657
+13      1.372
+14      1.715
+15      1.284
+16      1.309
+
+Best K = 7, K/hw = 0.875
+
+===== SIZE = 5000000 =====
+transform_reduce (no policy):   15.391 ms
+transform_reduce (par):         3.408 ms
+transform_reduce (par_unseq):   3.675 ms
+
+Manual parallel transform_reduce:
+K       Time_ms
+1       16.426
+2       9.048
+3       5.992
+4       5.235
+5       6.315
+6       5.321
+7       5.031
+8       4.293
+9       5.497
+10      4.870
+11      4.645
+12      5.617
+13      4.846
+14      4.717
+15      4.529
+16      4.339
+
+Best K = 8, K/hw = 1.000
